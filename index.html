@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Sentiment Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>⚡ SENTIMENT ANALYZER ⚡</h1>
+            <p class="subtitle">Decode the Vibe • Track the Energy</p>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="videoUrl" placeholder="Drop YouTube URL to Analyze ..." />
+                <button id="analyzeBtn" onclick="startAnalysis()">🚀 Analyze</button>
+                <button id="stopBtn" onclick="stopAnalysis()" style="display:none;">⏸ Stop</button>
+            </div>
+            <div id="statusMsg"></div>
+        </div>
+
+        <div class="stats-grid" id="statsGrid" style="display:none;">
+            <div class="stat-card">
+                <h3>❤️ Total Vibes ❤️</h3>
+                <div class="value" id="totalComments" style="color: #fff;">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>🔥 Positive 🔥</h3>
+                <div class="value positive" id="positiveCount">0</div>
+                <small id="positivePercent">0%</small>
+            </div>
+            <div class="stat-card">
+                <h3>😐 Neutral 😐</h3>
+                <div class="value neutral" id="neutralCount">0</div>
+                <small id="neutralPercent">0%</small>
+            </div>
+            <div class="stat-card">
+                <h3>💀 Negative 💀</h3>
+                <div class="value negative" id="negativeCount">0</div>
+                <small id="negativePercent">0%</small>
+            </div>
+        </div>
+
+        <div class="comments-section" id="commentsSection" style="display:none;">
+            <h2>💬 Live Feed</h2>
+            <div id="commentsList"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
