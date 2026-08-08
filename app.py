@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # YouTube API configuration
-YOUTUBE_API_KEY = 'AIzaSyC_gguzxPUari0_sN5XKG3Xe5tw_MmHKYw'  
+YOUTUBE_API_KEY = '**********************************'  
 
 # Initialize the analyzer
 analyzer = YouTubeAnalyzer(YOUTUBE_API_KEY)
